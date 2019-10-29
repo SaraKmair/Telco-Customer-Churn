@@ -20,3 +20,4 @@ Diagnostic Analysis
 Predictive Analysis
 •	With what accuracy can we predict future churns?
 
+Data Source: https://www.kaggle.com/blastchar/telco-customer-churn
