@@ -38,7 +38,7 @@ cchurn[which(cchurn$tenure == 1), ]
 cchurn[which(is.na(cchurn$TotalCharges)), ] 
 
 #replacing the missing values with 0
-cchurn$TotalCharges[which(is.na(cchurn$TotalCharges))] <- 0
+cchurn$TotalCharges[which(is.na(cchurn$TotalCharges))] <- cchurn$MonthlyCharges[which(is.na(cchurn$TotalCharges))] 
 ```
 
 
