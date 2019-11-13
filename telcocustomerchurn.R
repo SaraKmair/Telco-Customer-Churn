@@ -34,10 +34,10 @@ summary(cchurn)
 #I checked here if a customer has been with the company for a month. I noticed that monthly charge = total charge
 cchurn[which(cchurn$tenure == 1), ]
 
-#I will replace the total charges missing values with 0 for now 
+#I will replace the total charges missing values with monthly charge since customer with no total charges have been with the company for less than a month
 cchurn[which(is.na(cchurn$TotalCharges)), ] 
 
-#replacing the missing values with 0
+#replacing the missing values with the monthly charge
 cchurn$TotalCharges[which(is.na(cchurn$TotalCharges))] <- cchurn$MonthlyCharges[which(is.na(cchurn$TotalCharges))] 
 ```
 
