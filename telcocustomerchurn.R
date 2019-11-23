@@ -49,6 +49,7 @@ cchurn$TotalCharges[which(is.na(cchurn$TotalCharges))] <- cchurn$MonthlyCharges[
 
 cchurn$customerID <- as.character(cchurn$customerID)
 str(cchurn)
+
 #changing senior citizen into a factor 
 cchurn$SeniorCitizen <- as.factor(cchurn$SeniorCitizen)
 summary(cchurn$SeniorCitizen)
@@ -145,6 +146,7 @@ cchurn %>%
 
 #let's subset the customer churn and see if they have anything in common 
 churn_sub <- cchurn[which(cchurn$Churn == 'Yes'), ] 
+
 #subsetting the dataset 
 nochurn_sub <- cchurn[which(cchurn$Churn == 'No'), ] 
 
@@ -178,7 +180,7 @@ imbalanced data refers to classification problems where we have unequal instance
 Under-sampling, we randomly select a subset of samples from the class with more instances to match the number of samples coming from each class. 
 oversampling, we randomly duplicate samples from the class with fewer instances or we generate additional instances based on the data that we have, so as to match the number of samples in each class. 
 
-```{r}
+
 #checking the severity of imbalanced data 
 table(cchurn$Churn)
 
